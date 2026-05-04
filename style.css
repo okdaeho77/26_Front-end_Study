@@ -1,0 +1,150 @@
+/* 기본 설정 */
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; /* 타자기 느낌의 폰트 */
+}
+
+/* 티켓 전체 컨테이너 */
+.ticket {
+    width: 350px;
+    background-color: #f3efdf; /* 이미지의 빈티지 종이 색상 */
+    border: 2px solid #000;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* 상단 섹션 */
+.ticket-top {
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.album-art {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #002060;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-info .artist {
+    font-size: 24px;
+    color: #4a2c2a;
+    margin: 0;
+}
+
+.song-info .song-title {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 5px 0;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* 플레이어 컨트롤 */
+.player-controls {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    height: 3px;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.heart-marker {
+    position: absolute;
+    left: 40%;
+    top: -8px;
+    font-size: 14px;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* 절취선 디자인 */
+.divider {
+    position: relative;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.dotted-line {
+    width: 100%;
+    border-top: 2px dashed #000;
+}
+
+.notch {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0; /* 배경색과 동일하게 맞춰 구멍 뚫린 효과 */
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #000;
+}
+
+.notch.left { left: -17px; }
+.notch.right { right: -17px; }
+
+/* 하단 섹션 (바코드) */
+.ticket-bottom {
+    padding: 20px;
+    text-align: center;
+}
+
+.barcode-lines {
+    height: 60px;
+    /* 바코드 패턴 생성 */
+    background: repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px,
+        #000 4px,
+        #000 5px,
+        transparent 5px,
+        transparent 8px
+    );
+    margin-bottom: 5px;
+}
+
+.barcode-numbers {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
